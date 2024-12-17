@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full DOM Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      margin-top: 20px;
+    }
+    .box {
+      background-color: lightblue;
+      margin: 10px auto;
+      padding: 10px;
+      border: 2px solid blue;
+      width: 200px;
+      text-align: center;
+    }
+    button {
+      margin: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="main-title">Welcome to DOM Manipulation</h1>
+  <p id="description">Learn how to manipulate the DOM with JavaScript.</p>
+  
+  <!-- Buttons to perform DOM actions -->
+  <button id="changeTextBtn">Change Text</button>
+  <button id="changeStyleBtn">Change Style</button>
+  <button id="addBoxBtn">Add New Box</button>
+  <button id="removeBoxBtn">Remove Box</button>
+
+  <!-- Container for new elements -->
+  <div id="container"></div>
+
+  <script>
+    // DOM SELECTORS
+    const mainTitle = document.getElementById("main-title");
+    const description = document.querySelector("#description");
+    const container = document.getElementById("container");
+
+    const changeTextBtn = document.getElementById("changeTextBtn");
+    const changeStyleBtn = document.getElementById("changeStyleBtn");
+    const addBoxBtn = document.getElementById("addBoxBtn");
+    const removeBoxBtn = document.getElementById("removeBoxBtn");
+
+    // EVENT HANDLERS
+
+    // 1. Change Text Content
+    changeTextBtn.addEventListener("click", () => {
+      mainTitle.textContent = "DOM Manipulation is Fun!";
+      description.textContent = "You just changed the text dynamically!";
+    });
+
+    // 2. Change Styles
+    changeStyleBtn.addEventListener("click", () => {
+      mainTitle.style.color = "white";
+      mainTitle.style.backgroundColor = "darkblue";
+      mainTitle.style.padding = "10px";
+      description.style.fontSize = "18px";
+    });
+
+    // 3. Add New Box Element
+    addBoxBtn.addEventListener("click", () => {
+      // Create a new div
+      const newBox = document.createElement("div");
+      newBox.classList.add("box");
+      newBox.textContent = "I'm a new Box!";
+
+      // Append the new box to the container
+      container.appendChild(newBox);
+    });
+
+    // 4. Remove the Last Box
+    removeBoxBtn.addEventListener("click", () => {
+      // Select all boxes
+      const allBoxes = document.querySelectorAll(".box");
+
+      if (allBoxes.length > 0) {
+        const lastBox = allBoxes[allBoxes.length - 1];
+        container.removeChild(lastBox); // Remove the last box
+      } else {
+        alert("No more boxes to remove!");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -29,6 +29,4 @@ console.log(person.name);      // Output: Maher Ali
 console.log(person.age);       // Output: 25
 console.log(person.skills[2]); // Output: JavaScript
 
-// Adding a new property
-person.hobbies = ["Reading", "Traveling"];
-console.log(person.hobbies); // Output: ["Reading", "Traveling"]
+

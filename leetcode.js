@@ -8,3 +8,5 @@ var findLUSlength = function(a, b) {
     if (a === b) return -1;
     return Math.max(a.length, b.length);
 };
+// Time Complexity: O(1)
+// Space Complexity: O(1)

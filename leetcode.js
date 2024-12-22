@@ -10,3 +10,13 @@ var findLUSlength = function(a, b) {
 };
 // Time Complexity: O(1)
 // Space Complexity: O(1)
+
+var findEven = function(nums) {
+    let count = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] % 2 === 0) {
+            count++;
+        }
+    }
+    return count;
+};

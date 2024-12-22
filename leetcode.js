@@ -30,3 +30,9 @@ var findOdd = function(nums) {
     }
     return count;
 };
+
+var findEvenOdd = function(nums) {
+    let even = findEven(nums);
+    let odd = findOdd(nums);
+    return [even, odd];
+};

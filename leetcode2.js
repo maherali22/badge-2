@@ -33,3 +33,15 @@ const reverseString = (str) => {
   }
   return reversed;
 };
+
+let x="Hello";
+console.log(reverseString(x));
+
+//reverse string using recursion
+const reverseStringRecursion = (str) => {
+  if (str === "") {
+    return "";
+  } else {
+    return reverseStringRecursion(str.substr(1)) + str.charAt(0);
+  }
+};

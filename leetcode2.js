@@ -16,3 +16,20 @@ let a = "anagram";
 let b = "nagaram";
 console.log(anagram(a, b));
 console.log(anagram("anagram", "gramanb"));
+
+const starPattern = (n) => {
+  let str = "";
+  for (let i = 0; i < n; i++) {
+    str += "*";
+  }
+  return str;
+};
+
+//reverse srting using for loop
+const reverseString = (str) => {
+  let reversed = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  return reversed;
+};

@@ -71,3 +71,14 @@ do {
   console.log(k);
   k++;
 } while (k < 10);
+
+//example for for in loop
+
+let obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+for (let key in obj) {
+  console.log(key);
+}

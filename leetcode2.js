@@ -82,3 +82,35 @@ let obj = {
 for (let key in obj) {
   console.log(key);
 }
+
+//example for for of loop
+
+let arr = [1, 2, 3, 4, 5];
+for (let i of arr) {
+  console.log(i);
+}
+
+// example for map function
+
+let arr2 = [1, 2, 3, 4, 5];
+let arr3 = arr2.map((i) => i * 2);
+console.log(arr3);
+
+//example for filter function
+
+let arr4 = [1, 2, 3, 4, 5];
+let arr5 = arr4.filter((i) => i % 2 === 0);
+console.log(arr5);
+
+//example for reduce function
+
+let arr6 = [1, 2, 3, 4, 5];
+let arr7 = arr6.reduce((acc, curr) => acc + curr, 0);
+console.log(arr7);
+
+//example for foreach function
+
+let arr8 = [1, 2, 3, 4, 5];
+arr8.forEach((i) => console.log(i));
+
+

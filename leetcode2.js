@@ -113,4 +113,8 @@ console.log(arr7);
 let arr8 = [1, 2, 3, 4, 5];
 arr8.forEach((i) => console.log(i));
 
+//example for every function
 
+let arr9 = [1, 2, 3, 4, 5];
+let arr10 = arr9.every((i) => i % 2 === 0);
+console.log(arr10);
